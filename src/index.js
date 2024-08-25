@@ -10,6 +10,7 @@ dotenv.config(
 
 connectDB()
 .then(()=>{
+<<<<<<< HEAD
    app.on("error",()=>{
       console.log("Error in connectig",error)
    })
@@ -17,6 +18,13 @@ connectDB()
    app.listen(process.env.PORT||8000, ()=>{
       console.log(`Server running on PORT ${process.env.PORT}`)
       
+=======
+   app.listen(process.env.PORT||8000, ()=>{
+      console.log(`Server running on PORT ${process.env.PORT}`)
+      app.on("error",()=>{
+         console.log("Error in connectig",error)
+      })
+>>>>>>> origin/main
    })
 
 })
